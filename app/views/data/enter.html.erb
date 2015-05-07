@@ -1,0 +1,7 @@
+<h1>Search here</h1>
+<%= form_tag data_search_path, method:'get', remote: true do %>
+<%= text_field_tag :search ,'',size:25, :autocomplete => :off %>
+<%= submit_tag 'Search', :id => 'search_key' %>
+<% end %>
+<%= link_to "Back to Posts",posts_path %>
+<div id='user_data'></div>

@@ -1,0 +1,7 @@
+$('tr').find('td:first').each(function(){
+	 if ($(this).text()== ('<%= raw @post.name %>')) {
+	 	$(this).parent().remove();
+
+	 }
+
+});

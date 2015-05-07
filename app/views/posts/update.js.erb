@@ -1,0 +1,4 @@
+$('.edit_post').remove();
+$('.new_one').show();
+$('.edit_row').find('td:first').text('<%= raw @post.name %>').next().text('<%= raw @post.comment %>');
+$('tr').removeClass('edit_row');

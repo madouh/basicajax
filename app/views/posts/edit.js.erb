@@ -1,0 +1,11 @@
+$('.edit_post').remove();
+$('.new_post').remove();
+$('tr').removeClass('edit_row');
+$('.new_one').hide().after("<%= j render 'form' %>");
+$('tr').find('td:first').each(function(){
+	 if ($(this).text()== ('<%= raw @post.name %>')) {
+	 	$(this).parent().addClass("edit_row");
+
+	 }
+
+});

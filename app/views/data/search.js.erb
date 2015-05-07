@@ -1,0 +1,10 @@
+$(function() {
+    var availableTags =<%= raw @auto %>;
+    $( "#search" ).autocomplete({
+      source: availableTags
+    });
+  });
+$(function(){
+	$('#search').autocomplete('search','<%= raw @clean_params %>');
+});
+$('#user_data').html("<%= j render 'data' %>");    
